@@ -26,3 +26,6 @@ wp-signup.php
 wp-trackback.php
 xmlrpc.php
 *.log
+wp-content/languages/
+wp-content/updraft/
+wp-content/wflogs/
