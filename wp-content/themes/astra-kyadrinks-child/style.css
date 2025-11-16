@@ -1,0 +1,17 @@
+/*
+Theme Name: Astra KYA DRINKS Child
+Theme URI: https://kyadrinks.com
+Description: Theme enfant pour KYA DRINKS
+Author: KYA DRINKS Team
+Template: astra
+Version: 1.0.0
+Text Domain: astra-kyadrinks-child
+*/
+:root{--primary-dark:#1a1a1a;--primary-gold:#c9a961;--secondary-dark:#2d2d2d;--secondary-gold:#e6c882;--white:#fff;--gray-dark:#3a3a3a}
+body{font-family:Montserrat,sans-serif;color:var(--white);background-color:var(--primary-dark);line-height:1.6}
+h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif;color:var(--primary-gold);font-weight:700}
+a{color:var(--primary-gold);text-decoration:none;transition:color .3s}
+a:hover{color:var(--secondary-gold)}
+.button,.btn,.ast-button{background-color:var(--primary-gold)!important;color:var(--primary-dark)!important;padding:12px 32px;font-weight:600;text-transform:uppercase;transition:all .3s}
+.woocommerce ul.products li.product{background-color:var(--secondary-dark);border:1px solid var(--gray-dark);transition:all .3s}
+.woocommerce ul.products li.product:hover{transform:translateY(-5px);box-shadow:0 8px 24px rgba(201,169,97,.2)}
