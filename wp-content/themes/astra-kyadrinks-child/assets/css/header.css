@@ -1,0 +1,421 @@
+/**
+ * CSS Header KYA DRINKS
+ * Style CC AFRICA mais pour KYA DRINKS
+ * À placer dans : assets/css/header.css
+ */
+
+/* ========================================
+   HEADER PRINCIPAL
+======================================== */
+.kya-header {
+    background: var(--kya-dark);
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.kya-header.sticky {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.kya-header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 140px;
+}
+
+/* ========================================
+   LOGO
+======================================== */
+.kya-header-logo a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    transition: var(--kya-transition);
+}
+
+.kya-header-logo a:hover {
+    opacity: 0.8;
+}
+
+.kya-logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--kya-gold);
+    letter-spacing: 2px;
+}
+
+.kya-logo-tagline {
+    font-size: 0.7rem;
+    color: var(--kya-white);
+    letter-spacing: 1px;
+    margin-top: -5px;
+}
+
+.kya-header-logo img {
+    max-height: 60px;
+    width: auto;
+}
+
+/* ========================================
+   MENU PRINCIPAL
+======================================== */
+.kya-header-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.kya-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 5px;
+}
+
+.kya-menu-item {
+    position: relative;
+}
+
+.kya-menu-link {
+    display: flex;
+    align-items: center;
+    padding: 28px 20px;
+    color: var(--kya-white);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: var(--kya-transition);
+    position: relative;
+}
+
+.kya-menu-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: var(--kya-gold);
+    transition: width 0.3s ease;
+}
+
+.kya-menu-link:hover,
+.kya-menu-item.current-menu-item .kya-menu-link {
+    color: var(--kya-gold);
+}
+
+.kya-menu-link:hover::after,
+.kya-menu-item.current-menu-item .kya-menu-link::after {
+    width: 80%;
+}
+
+.kya-dropdown-arrow {
+    font-size: 0.7rem;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.kya-has-dropdown:hover .kya-dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* ========================================
+   MEGA MENU (Catégories)
+======================================== */
+.kya-mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--kya-white);
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    min-width: 600px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.kya-has-dropdown:hover .kya-mega-menu {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0;
+}
+
+.kya-mega-menu-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.kya-mega-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: var(--kya-text);
+    border-radius: 5px;
+    transition: var(--kya-transition);
+    border: 1px solid transparent;
+}
+
+.kya-mega-menu-item:hover {
+    background: var(--kya-gold);
+    color: var(--kya-dark);
+    border-color: var(--kya-gold);
+    transform: translateX(5px);
+}
+
+.kya-mega-icon {
+    font-size: 1.5rem;
+}
+
+.kya-mega-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* ========================================
+   ACTIONS HEADER (Panier + Compte)
+======================================== */
+.kya-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.kya-header-icon,
+.kya-header-cart {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--kya-white);
+    text-decoration: none;
+    transition: var(--kya-transition);
+    position: relative;
+}
+
+.kya-header-icon:hover,
+.kya-header-cart:hover {
+    color: var(--kya-gold);
+}
+
+.kya-header-cart {
+    padding: 8px 15px;
+    border: 1px solid var(--kya-gold);
+    border-radius: 50px;
+}
+
+.kya-cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--kya-gold);
+    color: var(--kya-dark);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 50%;
+    min-width: 20px;
+    text-align: center;
+}
+
+.kya-cart-total {
+    font-weight: 700;
+    color: var(--kya-gold);
+}
+
+/* ========================================
+   MENU MOBILE
+======================================== */
+.kya-mobile-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.kya-mobile-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--kya-gold);
+    transition: all 0.3s ease;
+}
+
+.kya-mobile-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.kya-mobile-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.kya-mobile-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.kya-mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.kya-mobile-menu-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+@media (max-width: 1024px) {
+    .kya-menu-link {
+        padding: 28px 15px;
+        font-size: 0.9rem;
+    }
+
+    .kya-mega-menu {
+        min-width: 500px;
+    }
+
+    .kya-mega-menu-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .kya-header-container {
+        height: 70px;
+    }
+
+    .kya-mobile-toggle {
+        display: flex;
+    }
+
+    .kya-header-nav {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 280px;
+        height: calc(100vh - 70px);
+        background: var(--kya-dark);
+        transition: left 0.3s ease;
+        z-index: 999;
+        overflow-y: auto;
+        padding: 20px 0;
+    }
+
+    .kya-header-nav.active {
+        left: 0;
+    }
+
+    .kya-menu {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .kya-menu-link {
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .kya-menu-link::after {
+        display: none;
+    }
+
+    .kya-mega-menu {
+        position: static;
+        transform: none;
+        min-width: auto;
+        opacity: 1;
+        visibility: visible;
+        margin-top: 0;
+        box-shadow: none;
+        border-radius: 0;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 15px;
+        display: none;
+    }
+
+    .kya-has-dropdown:hover .kya-mega-menu {
+        display: block;
+    }
+
+    .kya-mega-menu-content {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .kya-mega-menu-item {
+        padding: 10px;
+        color: var(--kya-white);
+    }
+
+    .kya-mega-menu-item:hover {
+        background: var(--kya-gold);
+        color: var(--kya-dark);
+    }
+
+    .kya-cart-total {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .kya-logo-text {
+        font-size: 1.4rem;
+    }
+
+    .kya-logo-tagline {
+        font-size: 0.6rem;
+    }
+
+    .kya-header-actions {
+        gap: 10px;
+    }
+}
+
+/* ========================================
+   BODY AVEC MENU OUVERT
+======================================== */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* ========================================
+   ESPACE POUR HEADER FIXED
+======================================== */
+body {
+    padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+}

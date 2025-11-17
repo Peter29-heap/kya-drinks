@@ -1,0 +1,192 @@
+/* ============================================
+   PANIER & CHECKOUT KYA DRINKS
+   ============================================ */
+
+/* PANIER */
+.woocommerce-cart .cart-collaterals {
+    background: #2d2d2d;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid #c9a961;
+}
+
+.woocommerce-cart table.cart {
+    background: #2d2d2d;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.woocommerce-cart table.cart th {
+    background: #1a1a1a;
+    color: #c9a961;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 20px;
+}
+
+.woocommerce-cart table.cart td {
+    color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.woocommerce-cart .cart_totals h2 {
+    color: #c9a961;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.woocommerce-cart .wc-proceed-to-checkout .button {
+    background: #c9a961 !important;
+    color: #1a1a1a !important;
+    width: 100%;
+    padding: 18px !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+}
+
+.woocommerce-cart .wc-proceed-to-checkout .button:hover {
+    background: #e6c882 !important;
+    transform: translateY(-2px);
+}
+
+.woocommerce-cart .product-remove a {
+    background: #c9a961 !important;
+    color: #1a1a1a !important;
+    width: 30px;
+    height: 30px;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.woocommerce-cart .coupon {
+    background: #2d2d2d;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.woocommerce-cart .coupon input {
+    background: #1a1a1a;
+    border: 2px solid #3a3a3a;
+    color: #fff;
+    padding: 12px;
+}
+
+/* CHECKOUT */
+.woocommerce-checkout {
+    background: #1a1a1a;
+}
+
+.woocommerce-checkout .woocommerce-billing-fields h3,
+.woocommerce-checkout .woocommerce-shipping-fields h3,
+.woocommerce-checkout #order_review_heading {
+    color: #c9a961;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.woocommerce-checkout .form-row input,
+.woocommerce-checkout .form-row textarea,
+.woocommerce-checkout .form-row select {
+    background: #2d2d2d !important;
+    border: 2px solid #3a3a3a !important;
+    color: #fff !important;
+    padding: 12px !important;
+    border-radius: 6px;
+}
+
+.woocommerce-checkout .form-row input:focus,
+.woocommerce-checkout .form-row textarea:focus,
+.woocommerce-checkout .form-row select:focus {
+    border-color: #c9a961 !important;
+    outline: none;
+}
+
+.woocommerce-checkout .form-row label {
+    color: #e6c882 !important;
+    font-weight: 600;
+}
+
+.woocommerce-checkout #order_review {
+    background: #2d2d2d;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid #c9a961;
+}
+
+.woocommerce-checkout #order_review table {
+    color: #fff;
+}
+
+.woocommerce-checkout #order_review th,
+.woocommerce-checkout #order_review td {
+    color: #fff;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.woocommerce-checkout #payment {
+    background: #2d2d2d;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.woocommerce-checkout #payment .payment_methods {
+    border: none;
+}
+
+.woocommerce-checkout #payment .payment_method_label {
+    color: #e6c882;
+}
+
+.woocommerce-checkout #place_order {
+    background: #c9a961 !important;
+    color: #1a1a1a !important;
+    width: 100%;
+    padding: 18px !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    border: none !important;
+    text-transform: uppercase !important;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.woocommerce-checkout #place_order:hover {
+    background: #e6c882 !important;
+    transform: translateY(-2px);
+}
+
+/* Messages succès/erreur */
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error {
+    background: #2d2d2d !important;
+    color: #fff !important;
+    border-top-color: #c9a961 !important;
+    padding: 20px !important;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.woocommerce-message::before,
+.woocommerce-info::before {
+    color: #c9a961 !important;
+}
+
+.woocommerce-error {
+    border-top-color: #ff4444 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .woocommerce-cart table.cart th,
+    .woocommerce-cart table.cart td {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,46 @@
+/**
+ * Styles globaux KYA DRINKS
+ */
+
+:root {
+    --kya-gold: #d4af37;
+    --kya-dark: #1a1a1a;
+    --kya-dark-gray: #2c2c2c;
+    --kya-beige: #f5e6d3;
+    --kya-white: #ffffff;
+    --kya-text: #333333;
+    --kya-text-light: #666666;
+    --kya-border: #e0e0e0;
+    --kya-transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--kya-text);
+}
+
+a {
+    color: var(--kya-gold);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--kya-dark);
+}
+
+/* Bannière promo */
+.kya-promo-banner {
+    background: var(--kya-gold);
+    color: var(--kya-dark);
+    padding: 15px 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+.kya-promo-banner p {
+    margin: 0;
+}
