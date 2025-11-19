@@ -170,60 +170,6 @@ function kya_age_verification_popup() {
 add_action('wp_footer', 'kya_age_verification_popup');
 
 
-// ============================================
-// PANIER & CHECKOUT - PERSONNALISATION
-// ============================================
-
-// Charger CSS Panier/Checkout
-add_action('wp_enqueue_scripts', function() {
-    if (is_cart() || is_checkout()) {
-        wp_enqueue_style(
-            'kyadrinks-cart-checkout',
-            get_stylesheet_directory_uri() . '/assets/css/woocommerce-cart-checkout.css',
-            array('woocommerce-general'),
-            '1.0.0'
-        );
-    }
-}, 20);
-
-// Personnaliser textes boutons WooCommerce
-add_filter('woocommerce_product_single_add_to_cart_text', function() {
-    return '🛒 Ajouter au panier';
-});
-
-add_filter('woocommerce_product_add_to_cart_text', function() {
-    return '🛒 Ajouter';
-});
-
-// Message succès ajout panier
-add_filter('wc_add_to_cart_message_html', function($message) {
-    return '<div class="woocommerce-message">✅ Produit ajouté au panier avec succès !</div>';
-});
-
-// Personnaliser placeholder checkout
-add_filter('woocommerce_checkout_fields', function($fields) {
-    $fields['billing']['billing_first_name']['placeholder'] = 'Prénom';
-    $fields['billing']['billing_last_name']['placeholder'] = 'Nom';
-    $fields['billing']['billing_phone']['placeholder'] = '+229 XX XX XX XX';
-    $fields['billing']['billing_email']['placeholder'] = 'votre@email.com';
-    $fields['billing']['billing_address_1']['placeholder'] = 'Adresse complète';
-    $fields['billing']['billing_city']['placeholder'] = 'Ville';
-    return $fields;
-});
-
-// Retirer champs inutiles checkout
-add_filter('woocommerce_checkout_fields', function($fields) {
-    unset($fields['billing']['billing_company']);
-    unset($fields['billing']['billing_address_2']);
-    unset($fields['billing']['billing_state']);
-    unset($fields['billing']['billing_postcode']);
-    return $fields;
-});
-
-// Message confirmation commande
-add_filter('woocommerce_thankyou_order_received_text', function($text) {
-    return '🎉 Merci pour votre commande ! Notre équipe va vous contacter rapidement pour confirmer la livraison.';
-});
 
 
 // Activer la mise à jour AJAX du panier WooCommerce
@@ -277,6 +223,29 @@ function kya_enqueue_ajax_add_to_cart() {
         wp_enqueue_script('jquery');
     }
 }
+
+
+// Traduction textes WooCommerce en français
+add_filter('gettext', function($translated, $text, $domain) {
+    if ($domain === 'woocommerce') {
+        $translations = [
+            'Free shipping' => 'Livraison gratuite',
+            'I would like to receive exclusive emails with discounts and product information' => 'Je souhaite recevoir des offres exclusives par email',
+            'Subtotal' => 'Sous-total',
+            'Total' => 'Total',
+            'Proceed to checkout' => 'Valider la commande',
+            'Place order' => 'Passer la commande',
+            'Checkout' => 'Finaliser la commande',
+            'Cart' => 'Panier',
+            'Product' => 'Produit',
+            'Quantity' => 'Quantité',
+            'Remove' => 'Retirer',
+        ];
+
+        return $translations[$text] ?? $translated;
+    }
+    return $translated;
+}, 20, 3);
 
 
 

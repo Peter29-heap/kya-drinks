@@ -225,7 +225,7 @@ if (!defined('ABSPATH')) exit;
             <h3>Navigation</h3>
             <ul>
                 <li><a href="<?php echo home_url('/'); ?>">Accueil</a></li>
-                <li><a href="<?php echo home_url('/boutique/'); ?>">Boutique</a></li>
+                <li><a href="<?php echo home_url('/shop/'); ?>">Boutique</a></li>
                 <li><a href="<?php echo home_url('/promotions/'); ?>">Promotions</a></li>
                 <li><a href="<?php echo home_url('/a-propos/'); ?>">À propos</a></li>
                 <li><a href="<?php echo home_url('/contact/'); ?>">Contact</a></li>
@@ -239,7 +239,7 @@ if (!defined('ABSPATH')) exit;
             <ul>
                 <li><a href="<?php echo home_url('/mentions-legales/'); ?>">Mentions légales</a></li>
                 <li><a href="<?php echo home_url('/cgv/'); ?>">CGV</a></li>
-                <li><a href="<?php echo home_url('/politique-confidentialite/'); ?>">Politique de confidentialité</a></li>
+                <li><a href="<?php echo home_url('/politique-de-confidentialite/'); ?>">Politique de confidentialité</a></li>
                 <li><a href="<?php echo home_url('/livraison-retours/'); ?>">Livraison & Retours</a></li>
                 <li><a href="<?php echo home_url('/faq/'); ?>">FAQ</a></li>
             </ul>
@@ -262,7 +262,7 @@ if (!defined('ABSPATH')) exit;
                 <i class="fas fa-phone"></i>
                 <div>
                     <strong>Téléphone :</strong><br>
-                    <a href="tel:+22966414718" style="color: #c9a961;">+229 66 41 47 18</a>
+                    <a href="tel:+22966413718" style="color: #c9a961;">+229 66 41 37 18</a>
                 </div>
             </div>
 
@@ -270,7 +270,7 @@ if (!defined('ABSPATH')) exit;
                 <i class="fas fa-envelope"></i>
                 <div>
                     <strong>Email :</strong><br>
-                    <a href="mailto:contact@kyadrinks.com" style="color: #c9a961;">contact@kyadrinks.com</a>
+                    <a href="mailto:ccafricabenin.com" style="color: #c9a961;">ccafricabenin.com</a>
                 </div>
             </div>
 

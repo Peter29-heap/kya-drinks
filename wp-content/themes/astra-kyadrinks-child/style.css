@@ -226,62 +226,176 @@ a:hover{color:var(--secondary-gold)}
 
 
 
-/* PANIER & CHECKOUT */
-.woocommerce-cart,
-.woocommerce-checkout {
-    background: #1a1a1a !important;
+/* ============================================
+   PAGE PANIER - DESIGN CLAIR ET LISIBLE
+   ============================================ */
+.woocommerce-cart {
+    background: #f5f5f5 !important;
+    padding: 40px 20px;
+    min-height: 100vh;
 }
 
-.woocommerce-cart table.cart,
-.woocommerce-checkout table {
-    background: #2d2d2d !important;
-}
-
-.woocommerce-cart table.cart th,
-.woocommerce-checkout table th {
-    background: #1a1a1a !important;
-    color: #c9a961 !important;
-    padding: 20px !important;
-}
-
-.woocommerce-cart table.cart td,
-.woocommerce-checkout table td {
-    color: #fff !important;
-    padding: 20px !important;
-    border-color: #3a3a3a !important;
-}
-
-.woocommerce-cart .cart_totals,
-.woocommerce-checkout #order_review {
-    background: #2d2d2d !important;
+.woocommerce-cart .woocommerce-cart-form,
+.woocommerce-cart .cart-collaterals {
+    background: #ffffff !important;
     padding: 30px !important;
-    border: 2px solid #c9a961 !important;
-    border-radius: 12px !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
 }
 
-.woocommerce-cart .wc-proceed-to-checkout .button,
-.woocommerce-checkout #place_order {
+/* En-têtes du tableau */
+.woocommerce-cart table.cart th {
+    background: #f9f9f9 !important;
+    color: #1a1a1a !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    padding: 15px !important;
+    border-bottom: 2px solid #c9a961 !important;
+    font-size: 14px;
+}
+
+/* Lignes du tableau */
+.woocommerce-cart table.cart td {
+    color: #1a1a1a !important;
+    padding: 20px 15px !important;
+    border-bottom: 1px solid #e8e8e8 !important;
+    vertical-align: middle;
+    background: #ffffff !important;
+}
+
+/* Nom du produit */
+.woocommerce-cart table.cart .product-name a {
+    color: #1a1a1a !important;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.woocommerce-cart table.cart .product-name a:hover {
+    color: #c9a961 !important;
+}
+
+/* Prix */
+.woocommerce-cart table.cart .product-price,
+.woocommerce-cart table.cart .product-subtotal {
+    color: #c9a961 !important;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+}
+
+/* Quantité */
+.woocommerce-cart .quantity input {
+    border: 2px solid #d0d0d0 !important;
+    border-radius: 6px;
+    padding: 10px 12px !important;
+    background: #ffffff !important;
+    color: #1a1a1a !important;
+    font-weight: 600;
+}
+
+/* Bouton supprimer */
+.woocommerce-cart .product-remove a {
+    background: #ff4444 !important;
+    color: #fff !important;
+    width: 32px !important;
+    height: 32px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    text-decoration: none !important;
+    font-size: 18px !important;
+}
+
+.woocommerce-cart .product-remove a:hover {
+    background: #cc0000 !important;
+}
+
+/* Total panier */
+.woocommerce-cart .cart_totals {
+    background: #fafafa !important;
+}
+
+.woocommerce-cart .cart_totals h2 {
+    color: #1a1a1a !important;
+    font-size: 24px !important;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #c9a961;
+}
+
+.woocommerce-cart .cart_totals th,
+.woocommerce-cart .cart_totals td {
+    color: #1a1a1a !important;
+    padding: 15px !important;
+    border-bottom: 1px solid #e8e8e8 !important;
+    font-size: 16px;
+}
+
+.woocommerce-cart .order-total th,
+.woocommerce-cart .order-total td {
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    color: #c9a961 !important;
+    border-top: 2px solid #c9a961 !important;
+}
+
+/* Bouton Valider la commande */
+.woocommerce-cart .wc-proceed-to-checkout .checkout-button {
     background: #c9a961 !important;
     color: #1a1a1a !important;
-    width: 100% !important;
-    padding: 18px !important;
+    border: none !important;
+    padding: 18px 40px !important;
     font-size: 18px !important;
     font-weight: 700 !important;
+    text-transform: uppercase !important;
+    border-radius: 50px !important;
+    width: 100% !important;
+    cursor: pointer;
+    transition: all 0.3s ease !important;
 }
 
-.woocommerce-checkout input,
-.woocommerce-checkout select,
-.woocommerce-checkout textarea {
-    background: #2d2d2d !important;
-    border: 2px solid #3a3a3a !important;
-    color: #fff !important;
-    padding: 12px !important;
+.woocommerce-cart .wc-proceed-to-checkout .checkout-button:hover {
+    background: #e6c882 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201,169,97,0.4) !important;
 }
 
-.woocommerce-checkout label {
-    color: #e6c882 !important;
+/* Coupon */
+.woocommerce-cart .coupon {
+    background: #f9f9f9 !important;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
 }
 
+.woocommerce-cart .coupon input {
+    background: #ffffff !important;
+    border: 2px solid #d0d0d0 !important;
+    color: #1a1a1a !important;
+    padding: 12px;
+}
+
+.woocommerce-cart .coupon label {
+    color: #1a1a1a !important;
+    font-weight: 600;
+}
+
+/* Messages */
+.woocommerce-message,
+.woocommerce-info {
+    background: #f0f8f0 !important;
+    color: #2d7a2d !important;
+    border-top-color: #4caf50 !important;
+    padding: 15px 20px !important;
+}
+
+.woocommerce-error {
+    background: #fff5f5 !important;
+    color: #c62828 !important;
+    border-top-color: #ff4444 !important;
+}
 
 /* SECTION COUPS DE CŒUR */
 .kya-featured {
@@ -475,4 +589,201 @@ a:hover{color:var(--secondary-gold)}
     .kya-products-grid {
         grid-template-columns: 1fr;
     }
+}
+
+
+/* ============================================
+   BOUTONS WOOCOMMERCE GLOBAUX - KYA DRINKS
+   ============================================ */
+.woocommerce button.button,
+.woocommerce a.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit,
+.woocommerce .checkout-button,
+.woocommerce-page button.button,
+.woocommerce-page a.button {
+    background: #c9a961 !important;
+    color: #1a1a1a !important;
+    padding: 14px 32px !important;
+    border: none !important;
+    border-radius: 50px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s ease !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.woocommerce button.button:hover,
+.woocommerce a.button:hover,
+.woocommerce input.button:hover {
+    background: #e6c882 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(201,169,97,0.4) !important;
+}
+
+/* BOUTON COMMANDER SPÉCIFIQUE */
+.woocommerce #place_order {
+    width: 100% !important;
+    padding: 22px 48px !important;
+    font-size: 20px !important;
+    border-radius: 50px !important;
+}
+
+/* TEXTES CHECKOUT TOUJOURS VISIBLES */
+.woocommerce-checkout *,
+.woocommerce-checkout label,
+.woocommerce-checkout p,
+.woocommerce-checkout span,
+.woocommerce-checkout td,
+.woocommerce-checkout th {
+    color: #1a1a1a !important;
+}
+
+/* PRIX EN DORÉ */
+.woocommerce-checkout .woocommerce-Price-amount,
+.woocommerce-checkout .product-total,
+.woocommerce-checkout .order-total td {
+    color: #c9a961 !important;
+}
+
+
+
+/* ============================================
+   CARTES PRODUITS - BOUTIQUE
+   ============================================ */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product {
+    background: #ffffff !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.product:hover {
+    border-color: #c9a961 !important;
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(201,169,97,0.3);
+}
+
+.product img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain !important;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: #f9f9f9;
+}
+
+.product .woocommerce-loop-product__title {
+    color: #1a1a1a !important;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 15px 0 10px;
+    min-height: 50px;
+}
+
+.product .price {
+    color: #c9a961 !important;
+    font-size: 24px;
+    font-weight: 700 !important;
+    margin-bottom: 15px;
+}
+
+.product .price del {
+    color: #999 !important;
+    font-size: 18px;
+}
+
+.product .button {
+    background: #c9a961 !important;
+    color: #1a1a1a !important;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: none !important;
+}
+
+.product .button:hover {
+    background: #e6c882 !important;
+    transform: scale(1.05);
+}
+
+/* Badge promo */
+.product .onsale {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #c9a961 !important;
+    color: #1a1a1a !important;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 14px;
+    z-index: 10;
+}
+
+/* Catégorie */
+.product .product-category {
+    color: #c9a961 !important;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+
+
+
+/* ACTIONS HEADER - CORRECTION VISIBILITÉ */
+.kya-header-actions a {
+    color: #c9a961 !important;
+    font-size: 22px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.kya-header-actions a i {
+    color: #c9a961 !important;
+    font-size: 22px;
+}
+
+.kya-header-actions a:hover {
+    color: #e6c882 !important;
+    transform: scale(1.1);
+}
+
+.kya-header-actions a:hover i {
+    color: #e6c882 !important;
+}
+
+/* Badge compteur panier */
+.kya-cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #c9a961 !important;
+    color: #1a1a1a !important;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
 }

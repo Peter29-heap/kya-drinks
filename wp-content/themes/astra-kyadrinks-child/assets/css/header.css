@@ -240,6 +240,21 @@
     color: var(--kya-gold);
 }
 
+/* ICÔNE PANIER */
+.kya-header-actions a.kya-cart-link {
+    color: #c9a961 !important;
+    position: relative;
+}
+
+.kya-header-actions a.kya-cart-link i.fas.fa-shopping-cart {
+    color: #c9a961 !important;
+    font-size: 24px !important;
+}
+
+.kya-header-actions a.kya-cart-link:hover i {
+    color: #e6c882 !important;
+}
+
 /* ========================================
    MENU MOBILE
 ======================================== */
@@ -418,4 +433,22 @@ body {
     body {
         padding-top: 70px;
     }
+}
+
+
+/* NAVIGATION - TITRES EN BLANC */
+.kya-nav ul li a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    padding: 10px 0;
+}
+
+.kya-nav ul li a:hover,
+.kya-nav ul li.current-menu-item a {
+    color: #c9a961 !important;
 }

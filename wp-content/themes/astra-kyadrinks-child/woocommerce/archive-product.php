@@ -289,6 +289,30 @@ get_template_part('templates/header', 'custom');
         gap: 20px;
     }
 }
+
+
+/* HEADER BOUTIQUE - TEXTES VISIBLES */
+.kya-shop-header {
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d) !important;
+    padding: 60px 40px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.kya-shop-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 56px);
+    color: #c9a961 !important;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.kya-shop-header p {
+    color: #ffffff !important;
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+}
 </style>
 
 <div class="kya-shop-page">

@@ -288,6 +288,47 @@ body { padding-top: 100px; } /* Hauteur du header */
         display: block;
     }
 }
+
+
+/* ACTIONS HEADER - CORRECTION VISIBILITÉ */
+.kya-header-actions a {
+    color: #c9a961 !important;
+    font-size: 22px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.kya-header-actions a i {
+    color: #c9a961 !important;
+    font-size: 22px;
+}
+
+.kya-header-actions a:hover {
+    color: #e6c882 !important;
+    transform: scale(1.1);
+}
+
+.kya-header-actions a:hover i {
+    color: #e6c882 !important;
+}
+
+/* Badge compteur panier */
+.kya-cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #c9a961 !important;
+    color: #1a1a1a !important;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+}
 </style>
 
 <header class="kya-header">
@@ -346,7 +387,7 @@ body { padding-top: 100px; } /* Hauteur du header */
             </a>
 
             <!-- Panier -->
-            <a href="<?php echo wc_get_cart_url(); ?>" title="Panier">
+            <a href="<?php echo wc_get_cart_url(); ?>" title="Panier" class="kya-cart-link">
                 <i class="fas fa-shopping-cart"></i>
                 <?php
                 $cart_count = WC()->cart->get_cart_contents_count();
