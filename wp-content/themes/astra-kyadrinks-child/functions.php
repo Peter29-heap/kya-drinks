@@ -249,5 +249,36 @@ add_filter('gettext', function($translated, $text, $domain) {
 
 
 
+// Forcer l'affichage des icônes sur toutes les pages
+function kya_fix_header_icons() {
+    ?>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const headerActions = document.querySelector('.kya-header-actions');
+        if (headerActions && !headerActions.querySelector('.fas')) {
+            // Ajouter l'icône utilisateur si manquante
+            if (!headerActions.querySelector('a[href*="myaccount"]')) {
+                const accountLink = document.createElement('a');
+                accountLink.href = '<?php echo esc_url(wc_get_page_permalink('myaccount')); ?>';
+                accountLink.title = 'Mon compte';
+                accountLink.innerHTML = '<i class="fas fa-user"></i>';
+                headerActions.insertBefore(accountLink, headerActions.firstChild);
+            }
+
+            // Ajouter l'icône panier si manquante
+            const cartLink = headerActions.querySelector('a[href*="cart"]');
+            if (cartLink && !cartLink.querySelector('.fas')) {
+                const icon = document.createElement('i');
+                icon.className = 'fas fa-shopping-cart';
+                cartLink.insertBefore(icon, cartLink.firstChild);
+            }
+        }
+    });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'kya_fix_header_icons');
+
+
 
 

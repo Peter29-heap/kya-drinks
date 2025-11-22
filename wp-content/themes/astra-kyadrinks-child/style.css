@@ -787,3 +787,49 @@ a:hover{color:var(--secondary-gold)}
     font-size: 12px;
     font-weight: 700;
 }
+
+
+
+/* ============================================
+   FIX FINAL - ICÔNES HEADER VISIBLES PARTOUT
+   ============================================ */
+
+/* Forcer l'affichage sur TOUTES les pages WooCommerce */
+body.woocommerce-cart .kya-header-actions,
+body.woocommerce-checkout .kya-header-actions,
+body.woocommerce .kya-header-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 25px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Forcer tous les liens à être visibles */
+body.woocommerce-cart .kya-header-actions a,
+body.woocommerce-checkout .kya-header-actions a,
+body.woocommerce .kya-header-actions a {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #c9a961 !important;
+}
+
+/* Forcer les icônes FontAwesome */
+body.woocommerce-cart .kya-header-actions i,
+body.woocommerce-checkout .kya-header-actions i,
+body.woocommerce .kya-header-actions i {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #c9a961 !important;
+}
+
+/* Badge compteur panier */
+body.woocommerce-cart .kya-cart-count,
+body.woocommerce-checkout .kya-cart-count,
+body.woocommerce .kya-cart-count {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
