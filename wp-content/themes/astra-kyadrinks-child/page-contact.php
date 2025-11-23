@@ -1,32 +1,32 @@
 <?php
 /**
  * Template Name: Page Contact
- * Template Post Type: page
  */
 
 include(get_stylesheet_directory() . '/templates/header-custom.php');
 ?>
 
-<main style="min-height: 100vh; background: #1a1a1a;">
-<?php
-?>
-
 <style>
+body:not(.kya-footer) { background: #ffffff !important; }
+main { background: #ffffff !important; }
+
 .kya-contact-hero {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    background: #ffffff;
     padding: 80px 20px;
     text-align: center;
+    border-bottom: 3px solid #c9a961;
 }
 
 .kya-contact-hero h1 {
     font-size: 48px;
     color: #c9a961;
     margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
 }
 
 .kya-contact-hero p {
     font-size: 20px;
-    color: #e6c882;
+    color: #1a1a1a;
 }
 
 .kya-contact-container {
@@ -39,32 +39,36 @@ include(get_stylesheet_directory() . '/templates/header-custom.php');
 }
 
 .kya-contact-info {
-    background: #2d2d2d;
+    background: #ffffff;
     padding: 40px;
     border-radius: 12px;
-    border: 2px solid #c9a961;
+    border: 2px solid #e0e0e0;
 }
 
 .kya-contact-info h2 {
     color: #c9a961;
     font-size: 32px;
     margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
 }
 
-.kya-contact-item {
+.kya-page-contact-item {
     display: flex;
     align-items: start;
     gap: 20px;
     margin-bottom: 30px;
     padding: 20px;
-    background: #3a3a3a;
+    background: #f9f9f9;
     border-radius: 8px;
     transition: all 0.3s;
+    border: 1px solid #e0e0e0;
 }
 
-.kya-contact-item:hover {
-    background: #454545;
+.kya-page-contact-item:hover {
+    background: #ffffff;
+    border-color: #c9a961;
     transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(201, 169, 97, 0.2);
 }
 
 .kya-contact-icon {
@@ -73,15 +77,17 @@ include(get_stylesheet_directory() . '/templates/header-custom.php');
 }
 
 .kya-contact-details h3 {
-    color: #ffffff;
+    color: #1a1a1a;
     font-size: 18px;
     margin-bottom: 8px;
+    font-weight: 600;
 }
 
 .kya-contact-details p {
-    color: #e6c882;
+    color: #666;
     font-size: 16px;
     margin: 0;
+    line-height: 1.6;
 }
 
 .kya-contact-details a {
@@ -94,16 +100,17 @@ include(get_stylesheet_directory() . '/templates/header-custom.php');
 }
 
 .kya-contact-form {
-    background: #2d2d2d;
+    background: #ffffff;
     padding: 40px;
     border-radius: 12px;
-    border: 2px solid #3a3a3a;
+    border: 2px solid #e0e0e0;
 }
 
 .kya-contact-form h2 {
     color: #c9a961;
     font-size: 32px;
     margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
 }
 
 .kya-form-group {
@@ -112,7 +119,7 @@ include(get_stylesheet_directory() . '/templates/header-custom.php');
 
 .kya-form-group label {
     display: block;
-    color: #e6c882;
+    color: #1a1a1a;
     font-weight: 600;
     margin-bottom: 8px;
 }
@@ -122,10 +129,10 @@ include(get_stylesheet_directory() . '/templates/header-custom.php');
 .kya-form-group select {
     width: 100%;
     padding: 15px;
-    background: #1a1a1a;
-    border: 2px solid #3a3a3a;
+    background: #ffffff;
+    border: 2px solid #e0e0e0;
     border-radius: 8px;
-    color: #ffffff;
+    color: #1a1a1a;
     font-size: 16px;
     transition: all 0.3s;
 }
@@ -169,17 +176,11 @@ include(get_stylesheet_directory() . '/templates/header-custom.php');
     padding: 0 20px;
 }
 
-.kya-map iframe {
-    width: 100%;
-    height: 450px;
-    border-radius: 12px;
-    border: 2px solid #c9a961;
-}
-
 .kya-hours {
-    background: #2d2d2d;
+    background: #ffffff;
     padding: 40px;
     border-radius: 12px;
+    border: 2px solid #e0e0e0;
     text-align: center;
     max-width: 600px;
     margin: 0 auto 60px;
@@ -189,6 +190,7 @@ include(get_stylesheet_directory() . '/templates/header-custom.php');
     color: #c9a961;
     font-size: 28px;
     margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
 }
 
 .kya-hours-grid {
@@ -200,17 +202,72 @@ include(get_stylesheet_directory() . '/templates/header-custom.php');
     display: flex;
     justify-content: space-between;
     padding: 15px 20px;
-    background: #3a3a3a;
+    background: #f9f9f9;
     border-radius: 6px;
+    border: 1px solid #e0e0e0;
 }
 
 .kya-hours-day {
-    color: #e6c882;
+    color: #1a1a1a;
     font-weight: 600;
 }
 
 .kya-hours-time {
-    color: #ffffff;
+    color: #666;
+}
+
+/* FAQ Section */
+.kya-faq {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.kya-faq h3 {
+    color: #c9a961;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.kya-faq-item {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+}
+
+.kya-faq-question {
+    color: #1a1a1a;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.kya-faq-answer {
+    color: #666;
+    line-height: 1.6;
+}
+
+.kya-faq-link {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.kya-faq-link a {
+    color: #c9a961;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.kya-faq-link a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -219,6 +276,8 @@ include(get_stylesheet_directory() . '/templates/header-custom.php');
     }
 }
 </style>
+
+<main style="min-height: 100vh; background: #ffffff;">
 
 <div class="kya-contact-hero">
     <h1>📞 Contactez-nous</h1>
@@ -231,11 +290,12 @@ include(get_stylesheet_directory() . '/templates/header-custom.php');
     <div class="kya-contact-info">
         <h2>Nos Coordonnées</h2>
 
-        <div class="kya-contact-item">
+        <div class="kya-page-contact-item">
             <div class="kya-contact-icon">📍</div>
             <div class="kya-contact-details">
                 <h3>Adresse</h3>
-                <p>Quartier Parakou Centre<br>Face à la grande mosquée<br>Parakou, Bénin</p>
+                <p><strong>1er emplacement :</strong> Parakou, en face du parking Confort<br>
+                <strong>2ème emplacement :</strong> Parakou, Quartier Zongo, en face de la maison lait caillé</p>
             </div>
         </div>
 
@@ -244,8 +304,8 @@ include(get_stylesheet_directory() . '/templates/header-custom.php');
             <div class="kya-contact-details">
                 <h3>Téléphone</h3>
                 <p>
-                    <a href="tel:+22997123456">+229 97 12 34 56</a><br>
-                    <a href="tel:+22961987654">+229 61 98 76 54</a>
+                    <a href="tel:+22901664137118">01 66 41 37 18</a><br>
+                    <a href="tel:+22901687148442">01 68 71 48 42</a>
                 </p>
             </div>
         </div>
@@ -255,8 +315,8 @@ include(get_stylesheet_directory() . '/templates/header-custom.php');
             <div class="kya-contact-details">
                 <h3>Email</h3>
                 <p>
-                    <a href="mailto:contact@kyadrinks.com">contact@kyadrinks.com</a><br>
-                    <a href="mailto:vente@kyadrinks.com">vente@kyadrinks.com</a>
+                    <a href="mailto:ccafricabenin@gmail.com">ccafricabenin@gmail.com</a><br>
+                    <a href="mailto:heaptech0@gmail.com">heaptech0@gmail.com</a>
                 </p>
             </div>
         </div>
@@ -266,7 +326,7 @@ include(get_stylesheet_directory() . '/templates/header-custom.php');
             <div class="kya-contact-details">
                 <h3>WhatsApp Business</h3>
                 <p>
-                    <a href="https://wa.me/22997123456" target="_blank">Message direct</a>
+                    <a href="https://wa.me/22901664137118" target="_blank">01 66 41 37 18</a>
                 </p>
             </div>
         </div>
@@ -335,25 +395,45 @@ include(get_stylesheet_directory() . '/templates/header-custom.php');
         <h3>⏰ Horaires d'Ouverture</h3>
         <div class="kya-hours-grid">
             <div class="kya-hours-item">
-                <span class="kya-hours-day">Lundi - Vendredi</span>
-                <span class="kya-hours-time">8h00 - 19h00</span>
-            </div>
-            <div class="kya-hours-item">
-                <span class="kya-hours-day">Samedi</span>
-                <span class="kya-hours-time">9h00 - 18h00</span>
+                <span class="kya-hours-day">Lundi - Samedi</span>
+                <span class="kya-hours-time">8h00 - 23h00</span>
             </div>
             <div class="kya-hours-item">
                 <span class="kya-hours-day">Dimanche</span>
-                <span class="kya-hours-time">10h00 - 16h00</span>
+                <span class="kya-hours-time">16h00 - 23h00</span>
             </div>
         </div>
     </div>
 
-    <!-- Carte Google Maps (placeholder) -->
-    <div style="background: #3a3a3a; height: 450px; border-radius: 12px; border: 2px solid #c9a961; display: flex; align-items: center; justify-content: center; font-size: 48px;">
-        🗺️ Carte à intégrer
+    <!-- Questions fréquentes -->
+    <div class="kya-faq">
+        <h3>❓ Questions Fréquentes</h3>
+
+        <div class="kya-faq-item">
+            <div class="kya-faq-question">🚚 Livrez-vous à domicile ?</div>
+            <div class="kya-faq-answer">Oui, nous assurons la livraison gratuite à Parakou pour toute commande supérieure à 50 000 FCFA. Des frais de livraison s'appliquent pour les zones éloignées.</div>
+        </div>
+
+        <div class="kya-faq-item">
+            <div class="kya-faq-question">💳 Quels sont les moyens de paiement acceptés ?</div>
+            <div class="kya-faq-answer">Nous acceptons le paiement en espèces, par Mobile Money (MTN, Moov) et par virement bancaire. Le paiement à la livraison est également disponible.</div>
+        </div>
+
+        <div class="kya-faq-item">
+            <div class="kya-faq-question">📦 Puis-je commander en gros ?</div>
+            <div class="kya-faq-answer">Absolument ! Nous proposons des tarifs préférentiels pour les commandes en gros. Contactez-nous directement pour obtenir un devis personnalisé.</div>
+        </div>
+
+        <div class="kya-faq-item">
+            <div class="kya-faq-question">✅ Vos produits sont-ils authentiques ?</div>
+            <div class="kya-faq-answer">Tous nos spiritueux sont 100% authentiques et importés directement des distilleries officielles. Chaque produit est accompagné de son certificat d'authenticité.</div>
+        </div>
+
+        <div class="kya-faq-link">
+            <a href="<?php echo home_url('/faq/'); ?>">📋 Pour plus d'informations, consultez notre FAQ complète →</a>
+        </div>
     </div>
 </div>
 
-</div>
+</main>
 <?php include(get_stylesheet_directory() . '/templates/footer-custom.php'); ?>

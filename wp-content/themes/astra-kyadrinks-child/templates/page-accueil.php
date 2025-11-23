@@ -245,7 +245,7 @@ wp_enqueue_style('kyadrinks-accueil', get_stylesheet_directory_uri() . '/assets/
                    ✅ Conseils personnalisés</p>
                 <div class="kya-b2b-buttons">
                     <a href="<?php echo home_url('/contact/'); ?>">Demander un Devis</a>
-                    <a href="<?php echo home_url('/boutique/'); ?>">Voir la Boutique Pro</a>
+                    <a href="<?php echo home_url('/shop/'); ?>">Voir la Boutique Pro</a>
                 </div>
             </div>
             <div class="kya-b2b-image">

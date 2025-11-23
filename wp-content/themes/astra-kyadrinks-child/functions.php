@@ -5,6 +5,12 @@ define('KYADRINKS_VERSION','1.0.0');
 define('KYADRINKS_URI', get_stylesheet_directory_uri());
 define('KYADRINKS_DIR', get_stylesheet_directory());
 
+// Charger FontAwesome sur TOUTES les pages
+function kya_load_fontawesome_everywhere() {
+    wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', array(), '6.4.0');
+}
+add_action('wp_enqueue_scripts', 'kya_load_fontawesome_everywhere', 1);
+
 function kyadrinks_enqueue_assets(){
     wp_enqueue_style('astra-parent-style', get_template_directory_uri().'/style.css');
     wp_enqueue_style('kyadrinks-child-style', KYADRINKS_URI.'/style.css', array('astra-parent-style'), KYADRINKS_VERSION);
@@ -44,7 +50,7 @@ add_action( 'after_setup_theme', 'kya_woocommerce_support' );
 // HEADER PERSONNALISÉ AVEC MÉGA-MENU
 // =============================================
 function kyadrinks_custom_header() {
-    get_template_part('templates/header', 'mega-menu');
+   include(get_stylesheet_directory() . '/templates/header-custom.php');
 }
 
 // Remplacer le header Astra par le nôtre
@@ -278,6 +284,18 @@ function kya_fix_header_icons() {
     <?php
 }
 add_action('wp_footer', 'kya_fix_header_icons');
+
+
+// Forcer le template cart.php personnalisé
+add_filter('woocommerce_locate_template', function($template, $template_name) {
+    if ($template_name === 'cart/cart.php') {
+        $custom_template = get_stylesheet_directory() . '/woocommerce/cart.php';
+        if (file_exists($custom_template)) {
+            return $custom_template;
+        }
+    }
+    return $template;
+}, 10, 2);
 
 
 

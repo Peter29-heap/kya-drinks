@@ -387,14 +387,19 @@ body { padding-top: 100px; } /* Hauteur du header */
             </a>
 
             <!-- Panier -->
-            <a href="<?php echo wc_get_cart_url(); ?>" title="Panier" class="kya-cart-link">
-                <i class="fas fa-shopping-cart"></i>
-                <?php
-                $cart_count = WC()->cart->get_cart_contents_count();
-                if ($cart_count > 0) :
-                ?>
-                <span class="kya-cart-count"><?php echo $cart_count; ?></span>
-                <?php endif; ?>
+            <a href="<?php echo wc_get_cart_url(); ?>" title="Panier" style="display: flex; align-items: center; gap: 10px; color: #c9a961; text-decoration: none;">
+                <span style="position: relative; display: inline-block;">
+                    <i class="fas fa-shopping-cart"></i>
+                    <?php
+                    $cart_count = WC()->cart->get_cart_contents_count();
+                    if ($cart_count > 0) :
+                    ?>
+                    <span class="kya-cart-count"><?php echo $cart_count; ?></span>
+                    <?php endif; ?>
+                </span>
+                <span style="color: #c9a961; font-weight: 600; font-size: 16px;">
+                    <?php echo WC()->cart->get_cart_total(); ?>
+                </span>
             </a>
         </div>
 
