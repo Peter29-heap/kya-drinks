@@ -1,6 +1,6 @@
 <?php
 /**
- * Archive Produits - Page Boutique KYA DRINKS
+ * Archive Produits - Page Boutique KYA STORE
  */
 
 if (!defined('ABSPATH')) exit;

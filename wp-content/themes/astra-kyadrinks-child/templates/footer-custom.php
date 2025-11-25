@@ -208,8 +208,8 @@ if (!defined('ABSPATH')) exit;
 
         <!-- COLONNE 1 : À PROPOS -->
         <div class="kya-footer-widget">
-            <div class="kya-footer-logo">KYA DRINKS</div>
-            <p class="kya-footer-tagline">Spiritueux premium, livraison rapide.<br>Votre cave d'excellence à Parakou.</p>
+            <div class="kya-footer-logo">KYA STORE</div>
+            <p class="kya-footer-tagline">Spiritueux premium, livraison rapide.<br>Votre store d'excellence à Parakou.</p>
             <p>Nous proposons une sélection rigoureuse de spiritueux authentiques pour particuliers et professionnels.</p>
 
             <div class="kya-social-links">
@@ -270,7 +270,7 @@ if (!defined('ABSPATH')) exit;
                 <i class="fas fa-envelope"></i>
                 <div>
                     <strong>Email :</strong><br>
-                    <a href="mailto:ccafricabenin.com" style="color: #c9a961;">ccafricabenin.com</a>
+                    <a href="mailto:ccafricabenin.com" style="color: #c9a961;">ccafricabenin@gmail.com</a>
                 </div>
             </div>
 
@@ -288,7 +288,7 @@ if (!defined('ABSPATH')) exit;
 
     <!-- FOOTER BOTTOM -->
     <div class="kya-footer-bottom">
-        <p>© <?php echo date('Y'); ?> <a href="<?php echo home_url('/'); ?>">KYA DRINKS Spiritueux Premium</a> - Tous droits réservés</p>
+        <p>© <?php echo date('Y'); ?> <a href="<?php echo home_url('/'); ?>">KYA STORE Spiritueux Premium</a> - Tous droits réservés</p>
         <p style="margin-top: 10px; font-size: 13px; opacity: 0.7;">
             ⚠️ L'abus d'alcool est dangereux pour la santé, à consommer avec modération.
         </p>

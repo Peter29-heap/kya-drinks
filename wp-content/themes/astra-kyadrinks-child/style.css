@@ -592,61 +592,7 @@ a:hover{color:var(--secondary-gold)}
 }
 
 
-/* ============================================
-   BOUTONS WOOCOMMERCE GLOBAUX - KYA DRINKS
-   ============================================ */
-.woocommerce button.button,
-.woocommerce a.button,
-.woocommerce input.button,
-.woocommerce #respond input#submit,
-.woocommerce .checkout-button,
-.woocommerce-page button.button,
-.woocommerce-page a.button {
-    background: #c9a961 !important;
-    color: #1a1a1a !important;
-    padding: 14px 32px !important;
-    border: none !important;
-    border-radius: 50px !important;
-    font-size: 16px !important;
-    font-weight: 700 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 1px !important;
-    transition: all 0.3s ease !important;
-    font-family: 'Montserrat', sans-serif !important;
-}
 
-.woocommerce button.button:hover,
-.woocommerce a.button:hover,
-.woocommerce input.button:hover {
-    background: #e6c882 !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(201,169,97,0.4) !important;
-}
-
-/* BOUTON COMMANDER SPÉCIFIQUE */
-.woocommerce #place_order {
-    width: 100% !important;
-    padding: 22px 48px !important;
-    font-size: 20px !important;
-    border-radius: 50px !important;
-}
-
-/* TEXTES CHECKOUT TOUJOURS VISIBLES */
-.woocommerce-checkout *,
-.woocommerce-checkout label,
-.woocommerce-checkout p,
-.woocommerce-checkout span,
-.woocommerce-checkout td,
-.woocommerce-checkout th {
-    color: #1a1a1a !important;
-}
-
-/* PRIX EN DORÉ */
-.woocommerce-checkout .woocommerce-Price-amount,
-.woocommerce-checkout .product-total,
-.woocommerce-checkout .order-total td {
-    color: #c9a961 !important;
-}
 
 
 
@@ -746,5 +692,490 @@ a:hover{color:var(--secondary-gold)}
 }
 
 
+/* ============================================
+   PAGE PANIER - FIX AFFICHAGE (VERSION CIBLÉE)
+   ============================================ */
+
+/* Espacement pour éviter que le header cache le contenu */
+body.woocommerce-cart,
+body.woocommerce-checkout {
+    padding-top: 140px !important;
+}
+
+/* Textes visibles UNIQUEMENT dans le contenu panier */
+.wp-block-woocommerce-cart .wc-block-cart,
+.wp-block-woocommerce-cart .wc-block-components-totals-wrapper {
+    color: #1a1a1a !important;
+}
+
+.wp-block-woocommerce-cart .wc-block-cart * {
+    color: #1a1a1a !important;
+}
+
+/* Prix en doré */
+.wp-block-woocommerce-cart .woocommerce-Price-amount,
+.wp-block-woocommerce-cart .wc-block-components-totals-item__value {
+    color: #c9a961 !important;
+}
+
+/* Titre panier */
+.wp-block-woocommerce-cart h1 {
+    color: #c9a961 !important;
+    margin-top: 40px !important;
+}
+
+/* Bouton Valider la commande - RESET du style noir */
+.wp-block-woocommerce-cart .wc-block-cart__submit-button,
+.wp-block-woocommerce-cart .wc-block-components-button {
+    background: #c9a961 !important;
+    color: #1a1a1a !important;
+    border: none !important;
+}
+
+.wp-block-woocommerce-cart .wc-block-cart__submit-button:hover {
+    background: #e6c882 !important;
+}
+
+.kya-nav ul li a {
+    color: #ffffff !important;
+}
 
 
+
+/* ============================================
+   PAGES PANIER & CHECKOUT - FIX AFFICHAGE
+   ============================================ */
+
+/* Espacement pour le header fixe */
+body.woocommerce-cart .site-content,
+body.woocommerce-checkout .site-content {
+    padding-top: 0px !important;
+}
+
+/* NE PAS TOUCHER AU HEADER */
+.kya-header,
+.kya-header *,
+.kya-nav ul li a {
+    color: inherit !important;
+}
+
+/* PANIER - Textes visibles */
+.wp-block-woocommerce-cart .wc-block-cart__main,
+.wp-block-woocommerce-cart .wc-block-components-totals-wrapper,
+.wp-block-woocommerce-cart .wc-block-cart-items__row {
+    color: #1a1a1a !important;
+}
+
+.wp-block-woocommerce-cart .wc-block-components-product-name,
+.wp-block-woocommerce-cart .wc-block-components-quantity-selector,
+.wp-block-woocommerce-cart td,
+.wp-block-woocommerce-cart th {
+    color: #1a1a1a !important;
+}
+
+/* Prix en doré */
+.wp-block-woocommerce-cart .woocommerce-Price-amount,
+.wp-block-woocommerce-cart .wc-block-components-totals-item__value,
+.wp-block-woocommerce-cart .wc-block-formatted-money-amount {
+    color: #c9a961 !important;
+}
+
+/* CHECKOUT - Textes visibles */
+.woocommerce-checkout .woocommerce-billing-fields,
+.woocommerce-checkout .woocommerce-shipping-fields,
+.woocommerce-checkout #order_review,
+.woocommerce-checkout .woocommerce-checkout-payment {
+    color: #1a1a1a !important;
+}
+
+.woocommerce-checkout label,
+.woocommerce-checkout p,
+.woocommerce-checkout h3,
+.woocommerce-checkout td,
+.woocommerce-checkout th {
+    color: #1a1a1a !important;
+}
+
+/* Bouton Commander - Style KYA DRINKS */
+.wp-block-woocommerce-checkout-actions-block .wc-block-components-checkout-place-order-button,
+.woocommerce-checkout #place_order,
+.woocommerce-checkout button[type="submit"] {
+    background: #c9a961 !important;
+    color: #1a1a1a !important;
+    border: none !important;
+    padding: 18px 40px !important;
+    border-radius: 50px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+}
+
+.wp-block-woocommerce-checkout-actions-block .wc-block-components-checkout-place-order-button:hover,
+.woocommerce-checkout #place_order:hover {
+    background: #e6c882 !important;
+}
+
+
+/* ============================================
+   WOOCOMMERCE BLOCKS - PANIER & CHECKOUT
+   ============================================ */
+
+/* fond de page */
+body.woocommerce-cart,
+body.woocommerce-checkout {
+    background: #f5f5f5 !important;
+}
+
+/* Container principal  */
+.wp-block-woocommerce-cart,
+.wp-block-woocommerce-checkout {
+    background: #ffffff !important;
+    padding: 60px 40px !important;
+    border-radius: 12px;
+    max-width: 1400px;
+    margin: 140px auto 60px !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* TITRES */
+.wp-block-woocommerce-cart h1,
+.wp-block-woocommerce-checkout h1,
+.wc-block-components-order-summary h2 {
+    color: #c9a961 !important;
+    font-family: 'Playfair Display', serif !important;
+    font-size: 36px !important;
+    margin-bottom: 30px !important;
+}
+
+/* TOUS LES TEXTES EN NOIR */
+.wp-block-woocommerce-cart *,
+.wp-block-woocommerce-checkout *,
+.wc-block-components-product-name,
+.wc-block-components-order-summary,
+.wc-block-components-totals-wrapper,
+.wc-block-cart-item,
+.wc-block-checkout__form,
+.wc-block-components-form label,
+.wc-block-components-form input,
+.wc-block-components-form select,
+.wc-block-components-panel p,
+.wc-block-components-sidebar-layout,
+.wc-block-components-quantity-selector,
+.wc-block-components-product-price,
+.wc-block-components-product-metadata,
+.wc-block-checkout-step__heading,
+.wc-block-checkout-step__description {
+    color: #1a1a1a !important;
+}
+
+/* PRIX EN DORÉ */
+.wp-block-woocommerce-cart .woocommerce-Price-amount,
+.wp-block-woocommerce-checkout .woocommerce-Price-amount,
+.wc-block-formatted-money-amount,
+.wc-block-components-product-price,
+.wc-block-components-totals-item__value,
+.wc-block-components-order-summary__item-price,
+.wc-block-cart-item__total,
+.wc-block-components-product-price .woocommerce-Price-currencySymbol {
+    color: #c9a961 !important;
+    font-weight: 700 !important;
+}
+
+/* Total en gros et doré */
+.wc-block-components-totals-footer-item .wc-block-formatted-money-amount {
+    color: #c9a961 !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+}
+
+/* TABLEAUX PRODUITS */
+.wc-block-cart-items,
+.wc-block-cart-item {
+    background: #ffffff !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    margin-bottom: 15px !important;
+}
+
+.wc-block-cart-item__image img {
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+}
+
+/* BOUTONS */
+.wc-block-cart__submit-button,
+.wc-block-components-checkout-place-order-button,
+.wc-block-components-button,
+.wp-block-woocommerce-cart .wc-block-cart__submit-button,
+.wp-block-woocommerce-checkout button[type="submit"] {
+    background: #c9a961 !important;
+    color: #1a1a1a !important;
+    border: none !important;
+    padding: 18px 40px !important;
+    border-radius: 50px !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    width: 100% !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.wc-block-cart__submit-button:hover,
+.wc-block-components-checkout-place-order-button:hover,
+.wc-block-components-button:hover {
+    background: #e6c882 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(201,169,97,0.4) !important;
+}
+
+
+
+.wc-block-components-text-input input:focus,
+.wc-block-components-select select:focus {
+    border-color: #c9a961 !important;
+    outline: none !important;
+}
+
+
+
+/* SIDEBAR RÉSUMÉ */
+.wc-block-components-order-summary,
+.wc-block-components-sidebar-layout {
+    background: #fafafa !important;
+    padding: 30px !important;
+    border-radius: 12px !important;
+    border: 1px solid #e0e0e0 !important;
+}
+
+.wc-block-components-order-summary__item {
+    color: #1a1a1a !important;
+    padding: 15px 0 !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.wc-block-components-totals-footer-item {
+    background: #ffffff !important;
+    padding: 20px !important;
+    border-top: 2px solid #c9a961 !important;
+    margin-top: 20px !important;
+}
+
+/* CODE PROMO */
+.wc-block-components-panel,
+.wc-block-components-panel__content {
+    background: #ffffff !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+}
+
+.wc-block-components-panel__button {
+    color: #c9a961 !important;
+    font-weight: 600 !important;
+}
+
+/* CHECKOUT - Formulaire */
+.wc-block-checkout__form {
+    background: #ffffff !important;
+    padding: 30px !important;
+    border-radius: 12px !important;
+    border: 1px solid #e0e0e0 !important;
+}
+
+.wc-block-checkout-step {
+    margin-bottom: 30px !important;
+}
+
+.wc-block-checkout-step__heading {
+    color: #c9a961 !important;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    margin-bottom: 20px !important;
+}
+
+/* Messages */
+.wc-block-components-notice-banner {
+    border-radius: 8px !important;
+    padding: 15px 20px !important;
+}
+
+.wc-block-components-notice-banner.is-success {
+    background: #f0f8f0 !important;
+    color: #2d7a2d !important;
+    border-color: #4caf50 !important;
+}
+
+.wc-block-components-notice-banner.is-error {
+    background: #fff5f5 !important;
+    color: #c62828 !important;
+    border-color: #ff4444 !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .wp-block-woocommerce-cart,
+    .wp-block-woocommerce-checkout {
+        padding: 30px 20px !important;
+        margin: 120px 20px 40px !important;
+    }
+}
+
+
+/* ============================================
+   PAGE MON COMPTE - AMÉLIORATION
+   ============================================ */
+
+.woocommerce-account {
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 0 40px;
+    background: #f5f5f5;
+}
+
+/* Header Mon compte */
+.woocommerce-account .woocommerce-MyAccount-content::before {
+    content: "👤 Mon Compte";
+    display: block;
+    font-size: 42px;
+    font-family: 'Playfair Display', serif;
+    color: #c9a961;
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+/* Navigation Mon compte */
+.woocommerce-account .woocommerce-MyAccount-navigation {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation li {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation li:last-child {
+    border-bottom: none;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation a {
+    display: block;
+    padding: 18px 20px;
+    color: #1a1a1a !important;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    border-left: 4px solid transparent;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation a:hover,
+.woocommerce-account .woocommerce-MyAccount-navigation li.is-active a {
+    background: #f9f9f9;
+    color: #c9a961 !important;
+    border-left-color: #c9a961;
+    padding-left: 30px;
+}
+
+/* Contenu Mon compte */
+.woocommerce-account .woocommerce-MyAccount-content {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.woocommerce-account h2,
+.woocommerce-account h3 {
+    color: #c9a961 !important;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #c9a961;
+}
+
+/* Formulaires */
+.woocommerce-account input[type="text"],
+.woocommerce-account input[type="email"],
+.woocommerce-account input[type="password"],
+.woocommerce-account select,
+.woocommerce-account textarea {
+    background: #fafafa !important;
+    border: 2px solid #e0e0e0 !important;
+    color: #1a1a1a !important;
+    padding: 12px 15px !important;
+    border-radius: 8px;
+}
+
+.woocommerce-account input:focus,
+.woocommerce-account select:focus,
+.woocommerce-account textarea:focus {
+    border-color: #c9a961 !important;
+    background: #fff !important;
+}
+
+/* Boutons */
+.woocommerce-account button,
+.woocommerce-account .button {
+    background: #c9a961 !important;
+    color: #1a1a1a !important;
+    padding: 14px 32px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    transition: all 0.3s !important;
+}
+
+.woocommerce-account button:hover,
+.woocommerce-account .button:hover {
+    background: #e6c882 !important;
+    transform: translateY(-2px);
+}
+
+/* Tableaux commandes */
+.woocommerce-account table {
+    background: #fafafa;
+    border-radius: 8px;
+}
+
+.woocommerce-account table thead th {
+    background: #f5f5f5 !important;
+    color: #1a1a1a !important;
+    font-weight: 700;
+    padding: 15px !important;
+    border-bottom: 2px solid #c9a961 !important;
+}
+
+.woocommerce-account table td {
+    padding: 15px !important;
+    color: #1a1a1a !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+
+/* Déconnexion */
+.woocommerce-account .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--customer-logout a {
+    color: #e74c3c !important;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--customer-logout a:hover {
+    background: #ffe5e5;
+    border-left-color: #e74c3c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .woocommerce-account .woocommerce-MyAccount-navigation {
+        margin-bottom: 30px;
+    }
+}

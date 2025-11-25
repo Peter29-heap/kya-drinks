@@ -341,7 +341,7 @@ body { padding-top: 100px; } /* Hauteur du header */
                     <?php the_custom_logo(); ?>
                 <?php else : ?>
                     <div class="kya-logo-text">
-                        <span>KYA DRINKS</span>
+                        <span>KYA STORE</span>
                         <span>Spiritueux Premium</span>
                     </div>
                 <?php endif; ?>

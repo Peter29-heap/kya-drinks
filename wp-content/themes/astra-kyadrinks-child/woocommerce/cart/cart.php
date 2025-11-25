@@ -13,7 +13,7 @@ get_template_part('templates/header', 'custom');
 .woocommerce-cart {
     max-width: 1400px;
     margin: 60px auto;
-    padding: 0 40px;
+    padding: 120px 40px 0 40px;
     background: #f5f5f5;
 }
 
@@ -279,6 +279,7 @@ get_template_part('templates/header', 'custom');
     color: #c62828 !important;
     border-top-color: #ff4444 !important;
 }
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {

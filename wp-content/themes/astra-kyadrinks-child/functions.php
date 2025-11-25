@@ -298,5 +298,105 @@ add_filter('woocommerce_locate_template', function($template, $template_name) {
 }, 10, 2);
 
 
+// ============================================
+// NEWSLETTER - TRAITEMENT FORMULAIRE
+// ============================================
+
+// Traiter l'inscription newsletter
+add_action('admin_post_nopriv_kyadrinks_newsletter', 'kyadrinks_handle_newsletter');
+add_action('admin_post_kyadrinks_newsletter', 'kyadrinks_handle_newsletter');
+
+function kyadrinks_handle_newsletter() {
+    // Vérifier les données
+    if (!isset($_POST['email']) || !is_email($_POST['email'])) {
+        wp_redirect(add_query_arg('newsletter', 'error', wp_get_referer()));
+        exit;
+    }
+
+    $name = sanitize_text_field($_POST['name']);
+    $email = sanitize_email($_POST['email']);
+
+    // Enregistrer dans la base de données WordPress
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'kyadrinks_newsletter';
+
+    // Créer la table si elle n'existe pas
+    $charset_collate = $wpdb->get_charset_collate();
+    $sql = "CREATE TABLE IF NOT EXISTS $table_name (
+        id mediumint(9) NOT NULL AUTO_INCREMENT,
+        name varchar(255) NOT NULL,
+        email varchar(255) NOT NULL UNIQUE,
+        date_added datetime DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (id)
+    ) $charset_collate;";
+
+    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+    dbDelta($sql);
+
+    // Insérer l'abonné
+    $inserted = $wpdb->insert(
+        $table_name,
+        array(
+            'name' => $name,
+            'email' => $email
+        ),
+        array('%s', '%s')
+    );
+
+    // Envoyer un email de confirmation
+    if ($inserted) {
+        $to = $email;
+        $subject = '🍾 Bienvenue dans la Cave KYA DRINKS !';
+        $message = "
+Bonjour $name,
+
+Merci de vous être inscrit à notre newsletter !
+
+Voici votre code promo de bienvenue : BIENVENUE10
+Profitez de -10% sur votre première commande.
+
+À très bientôt,
+L'équipe KYA DRINKS
+        ";
+
+        $headers = array('Content-Type: text/html; charset=UTF-8');
+        wp_mail($to, $subject, nl2br($message), $headers);
+
+        // Rediriger avec succès
+        wp_redirect(add_query_arg('newsletter', 'success', wp_get_referer()));
+    } else {
+        // Rediriger avec erreur
+        wp_redirect(add_query_arg('newsletter', 'exists', wp_get_referer()));
+    }
+
+    exit;
+}
+
+// Afficher les messages de confirmation
+add_action('wp_footer', function() {
+    if (isset($_GET['newsletter'])) {
+        $status = $_GET['newsletter'];
+        ?>
+        <script>
+        jQuery(document).ready(function($) {
+            var message = '';
+            var type = 'success';
+
+            <?php if ($status === 'success') : ?>
+                message = '✅ Inscription réussie ! Vérifiez votre email.';
+            <?php elseif ($status === 'exists') : ?>
+                message = 'ℹ️ Vous êtes déjà inscrit à notre newsletter.';
+                type = 'info';
+            <?php else : ?>
+                message = '❌ Erreur lors de l\'inscription. Réessayez.';
+                type = 'error';
+            <?php endif; ?>
+
+            alert(message);
+        });
+        </script>
+        <?php
+    }
+});
 
 

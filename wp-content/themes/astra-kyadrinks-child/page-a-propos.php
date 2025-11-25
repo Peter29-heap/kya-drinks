@@ -255,7 +255,7 @@ include(get_stylesheet_directory() . '/templates/header-custom.php');
 </style>
 
 <div class="kya-about-hero">
-    <h1>À Propos de KYA DRINKS</h1>
+    <h1>À Propos de KYA STORE</h1>
     <p>Votre partenaire de confiance pour les spiritueux premium à Parakou</p>
 </div>
 
@@ -266,7 +266,7 @@ include(get_stylesheet_directory() . '/templates/header-custom.php');
         <div class="kya-about-text">
             <h2>Notre Histoire</h2>
             <p>
-                Depuis 2023, <strong>KYA DRINKS</strong> s'est imposé comme le distributeur de référence en spiritueux premium à Parakou et dans tout le Bénin.
+                Depuis 2023, <strong>KYA STORE</strong> s'est imposé comme le distributeur de référence en spiritueux premium à Parakou et dans tout le Bénin.
                 Notre passion pour l'excellence et notre expertise nous permettent de vous offrir une sélection rigoureuse des meilleurs spiritueux du monde.
             </p>
             <p>
@@ -342,7 +342,7 @@ include(get_stylesheet_directory() . '/templates/header-custom.php');
     <div class="kya-cta-pro">
         <h2>Vous êtes professionnel ?</h2>
         <p>
-            Découvrez nos offres de vente en gros et devenez partenaire KYA DRINKS
+            Découvrez nos offres de vente en gros et devenez partenaire KYA STORE
         </p>
         <a href="<?php echo home_url('/contact/'); ?>">
             Nous contacter

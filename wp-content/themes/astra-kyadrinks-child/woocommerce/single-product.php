@@ -1,6 +1,6 @@
 <?php
 /**
- * Single Product - Page Produit KYA DRINKS
+ *  Page Produit KYA STORE
  */
 
 if (!defined('ABSPATH')) exit;

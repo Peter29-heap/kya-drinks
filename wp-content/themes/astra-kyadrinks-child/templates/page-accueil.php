@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Page Accueil KYA DRINKS
+ * Template Name: Page Accueil KYA STORE
  * Description: Template personnalisé pour la page d'accueil
  */
 
@@ -23,9 +23,9 @@ wp_enqueue_style('kyadrinks-accueil', get_stylesheet_directory_uri() . '/assets/
 
     <!-- SECTION 1 : HERO -->
     <section class="kya-hero">
-        <h1>KYA DRINKS</h1>
-        <p><strong>Votre caviste premium à Parakou</strong></p>
-        <a href="<?php echo home_url('/shop/'); ?>" class="cta-button">
+        <h1>KYA Store</h1>
+        <p><strong>Votre store premium de spiritueux à Parakou</strong></p>
+        <a href="<?php echo home_url('/boutique/'); ?>" class="cta-button">
             🛒 DÉCOUVREZ NOS NOUVEAUTÉS
         </a>
     </section>
@@ -36,7 +36,7 @@ wp_enqueue_style('kyadrinks-accueil', get_stylesheet_directory_uri() . '/assets/
             <div class="kya-usp-item">
                 <i class="fas fa-shipping-fast"></i>
                 <h3>Livraison Rapide</h3>
-                <p>Sous 24-48h</p>
+                <p>Sous 2h</p>
             </div>
             <div class="kya-usp-item">
                 <i class="fas fa-certificate"></i>
@@ -67,7 +67,7 @@ wp_enqueue_style('kyadrinks-accueil', get_stylesheet_directory_uri() . '/assets/
         // Récupérer les produits mis en avant (featured)
         $args = array(
             'post_type'      => 'product',
-            'posts_per_page' => 4, // Nombre de produits à afficher
+            'posts_per_page' => 4,
             'orderby'        => 'date',
             'order'          => 'DESC',
             'tax_query'      => array(
@@ -180,7 +180,7 @@ wp_enqueue_style('kyadrinks-accueil', get_stylesheet_directory_uri() . '/assets/
         </div>
 
         <div style="text-align: center; margin-top: 40px;">
-            <a href="<?php echo get_permalink(wc_get_page_id('shop')); ?>" style="
+            <a href="<?php echo get_permalink(wc_get_page_id('boutique')); ?>" style="
                 display: inline-block;
                 padding: 15px 40px;
                 background: transparent;
@@ -239,17 +239,17 @@ wp_enqueue_style('kyadrinks-accueil', get_stylesheet_directory_uri() . '/assets/
             <div class="kya-b2b-text">
                 <h2>Professionnels de la Restauration, Hôteliers, Cavistes ?</h2>
                 <p>Vente en détail et en gros. Vous souhaitez ravitailler votre boutique ?</p>
-                <p class="highlight">KYA DRINKS est votre meilleur partenaire.</p>
+                <p class="highlight">KYA STORE est votre meilleur partenaire.</p>
                 <p>✅ Tarifs préférentiels pour les professionnels<br>
                    ✅ Livraison rapide partout au Bénin<br>
                    ✅ Conseils personnalisés</p>
                 <div class="kya-b2b-buttons">
                     <a href="<?php echo home_url('/contact/'); ?>">Demander un Devis</a>
-                    <a href="<?php echo home_url('/shop/'); ?>">Voir la Boutique Pro</a>
+                    <a href="<?php echo home_url('/boutique/'); ?>">Voir la Boutique Pro</a>
                 </div>
             </div>
             <div class="kya-b2b-image">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/cave_kya.jpg" alt="Cave KYA DRINKS">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/cave_kya.jpg" alt="Cave KYA STORE">
             </div>
         </div>
     </section>
@@ -260,7 +260,7 @@ wp_enqueue_style('kyadrinks-accueil', get_stylesheet_directory_uri() . '/assets/
         <div class="kya-test-grid">
             <div class="kya-test-item">
                 <div class="kya-stars">⭐⭐⭐⭐⭐</div>
-                <p>"Livraison ultra rapide ! J'ai reçu mon Hennessy en moins de 2h à Parakou. Produits authentiques et bien emballés. Je recommande vivement KYA DRINKS !"</p>
+                <p>"Livraison ultra rapide ! J'ai reçu mon Hennessy en moins de 2h à Parakou. Produits authentiques et bien emballés. Je recommande vivement KYA STORE !"</p>
                 <h4>AMADOU Abdoul</h4>
                 <span>Client depuis 2024</span>
             </div>
@@ -272,7 +272,7 @@ wp_enqueue_style('kyadrinks-accueil', get_stylesheet_directory_uri() . '/assets/
             </div>
             <div class="kya-test-item">
                 <div class="kya-stars">⭐⭐⭐⭐⭐</div>
-                <p>"Produits authentiques, service impeccable. Je commande régulièrement mes spiritueux chez KYA DRINKS. Livraison gratuite respectée, paiement Mobile Money très facile."</p>
+                <p>"Produits authentiques, service impeccable. Je commande régulièrement mes spiritueux chez KYA STORE. Livraison gratuite respectée, paiement Mobile Money très facile."</p>
                 <h4>TOGBEDJI Gaëtan</h4>
                 <span>Client depuis 2023</span>
             </div>
